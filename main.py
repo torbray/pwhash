@@ -48,7 +48,7 @@ def main():
         if user.username == test_user:
 
             # Checks password hash against inputted hash
-            if user.hash == encrypt(test_pwd, user.salt)[1]:
+            if user.hash == encrypt(test_pwd, user.salt)[0]:
                 valid = True
                 session = user
                 break
